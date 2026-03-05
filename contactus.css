@@ -1,0 +1,99 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Flex Container */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to drop to next line on small screens */
+    margin-top: 40px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Form and Map Styling */
+.contact-form, .contact-map {
+    flex: 1 1 50%; /* Grow, Shrink, Basis (50% width) */
+    padding: 40px;
+    text-align: left;
+}
+
+.contact-map {
+    padding: 0; /* Map fills its half entirely */
+    min-height: 400px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-form, .contact-map {
+        flex: 1 1 100%; /* Forces 100% width on mobile */
+    }
+    
+    .contact-map {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}

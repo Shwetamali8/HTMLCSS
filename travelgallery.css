@@ -1,0 +1,76 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        /* --- The Gallery Grid --- */
+        .gallery-container {
+            display: grid;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Desktop: 4 Columns (Min-width 1024px) */
+        @media (min-width: 1024px) {
+            .gallery-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Tablet: 2 Columns (768px to 1023px) */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile: 1 Column (Default / Under 768px) */
+        @media (max-width: 767px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Destination Card Styling */
+        .dest-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .dest-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .dest-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .dest-info {
+            padding: 15px;
+        }
+
+        .dest-info h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .dest-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }

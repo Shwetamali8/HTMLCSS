@@ -1,0 +1,89 @@
+/* General Reset & Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; }
+
+/* --- Navbar Styling --- */
+.navbar {
+    padding: 2rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.logo span { color: #ff3e3e; }
+
+.nav-links a {
+    text-decoration: none;
+    color: #888;
+    margin: 0 1.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover { color: #fff; }
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem); /* Scales smoothly */
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    color: #888;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.cta-button:hover { background: #fff; color: #000; }
+
+/* --- Media Query (< 600px) --- */
+@media (max-width: 600px) {
+    .nav-container {
+        justify-content: center; /* Centers the logo when other items are gone */
+    }
+
+    .secondary {
+        display: none; /* Hides the link groups */
+    }
+
+    .hero {
+        padding: 0 1.5rem;
+    }
+}

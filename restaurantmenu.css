@@ -1,0 +1,79 @@
+:root {
+    --bg-color: #fdfcf8;
+    --text-main: #1a1a1a;
+    --accent: #4a6741; /* Sage Green */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.menu-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* Fluid Heading */
+.menu-header h1 {
+    font-size: clamp(3rem, 10vw, 6rem);
+    margin: 0;
+}
+
+/* Fluid Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(2rem, 5vw, 4rem);
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Fluid Image Dimensions */
+.menu-item img {
+    width: 100%;
+    height: clamp(200px, 30vw, 350px);
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Description List Styling */
+.dish-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 0.5rem;
+}
+
+dt {
+    font-weight: 700;
+    /* Fluid Dish Title */
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+}
+
+.price {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+dd {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #666;
+    line-height: 1.5;
+    /* Fluid Description Text */
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}

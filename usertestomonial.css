@@ -1,0 +1,78 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #2d3436;
+}
+
+/* Flex Container */
+.testimonial-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    gap: 20px;       /* Adds spacing between cards */
+    justify-content: center;
+}
+
+/* Testimonial Card Styling */
+.testimonial-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* Desktop: 3 cards per row (minus gap) */
+    flex: 0 1 calc(33.333% - 20px); 
+    min-width: 300px; /* Prevents cards from getting too squished */
+}
+
+.stars {
+    color: #f1c40f;
+    margin-bottom: 15px;
+}
+
+.quote {
+    font-style: italic;
+    color: #636e72;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.user-info strong {
+    display: block;
+    color: #2d3436;
+}
+
+.user-info span {
+    font-size: 0.9rem;
+    color: #b2bec3;
+}
+
+/* Responsive Breakpoint for Mobile */
+@media (max-width: 992px) {
+    .testimonial-card {
+        /* Mobile: 1 card per row */
+        flex: 1 1 100%;
+    }
+}
